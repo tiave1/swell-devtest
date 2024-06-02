@@ -38,6 +38,10 @@ describe('ReviewsList', () => {
 		render(<ReviewsList />);
 		await waitFor(() => {
 			expect(screen.getByText('Reviewer Name')).toBeInTheDocument();
+			expect(screen.getByText('Johnny Cash')).toBeInTheDocument();
+			expect(screen.getByText('Beta Corp.')).toBeInTheDocument();
+			expect(screen.getByText('Banksy Inc')).toBeInTheDocument();
+			expect(screen.getByText('4')).toBeInTheDocument();
 		});
 	});
 
